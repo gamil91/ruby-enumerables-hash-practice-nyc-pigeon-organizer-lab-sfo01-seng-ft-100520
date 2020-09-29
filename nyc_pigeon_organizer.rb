@@ -12,7 +12,7 @@ def nyc_pigeon_organizer (pigeon_data)
         if hash != hash[pigeon_name][attribute]
           hash[pigeon_name][attribute] = []
         end
-       
+       binding.pry
         if hash != hash[pigeon_name][attribute][value] 
           hash[pigeon_name][attribute] << value.to_s
         end

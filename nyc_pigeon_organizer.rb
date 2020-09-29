@@ -15,9 +15,7 @@ def nyc_pigeon_organizer (pigeon_data)
       
           hash[pigeon_name][attribute] << value.to_s
         
-        binding.pry
       end
     end 
   end
-  hash
 end

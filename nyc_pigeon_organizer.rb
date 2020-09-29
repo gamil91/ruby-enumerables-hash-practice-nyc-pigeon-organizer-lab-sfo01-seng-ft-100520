@@ -5,11 +5,11 @@ def nyc_pigeon_organizer (pigeon_data)
     values.each do |value, names|
       names.each do |pigeon_name|
      
-        if hash != hash[pigeon_name]
+        if !hash[pigeon_name]
           hash[pigeon_name] = {}
         end
         
-        if hash != hash[pigeon_name][attribute]
+        if !hash[pigeon_name][attribute]
           hash[pigeon_name][attribute] = []
         end
       

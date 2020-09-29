@@ -1,23 +1,24 @@
 require 'pry'
 
-def nyc_pigeon_organizer(data)
-  data.each_with_object({}) do |(attribute, value),final_hash|
-    value.each do |inner_key, names|
-      names.each do |name|
-      
-        if !final_hash[name]
-          final_hash[name] = {}
+def nyc_pigeon_organizer (pigeon_data)
+  pigeon_data.each_with_object({}) do |(attribute, values), hash|
+    values.each do |value, names|
+      names.each do |pigeon_name|
+     
+        if hash != hash[pigeon_name]
+          hash[pigeon_name] = {}
         end
         
-        if !final_hash[name][attribute]
-          final_hash[name][attribute] = []
+        if hash != hash[pigeon_name][attribute]
+          hash[pigeon_name][attribute] = []
         end
-        
-        final_hash[name][attribute].push(inner_key.to_s)
-      
-      end    
-    end
-    final_hash
+       binding.pry
+        if hash != hash[pigeon_name][attribute][value] 
+          hash[pigeon_name][attribute] << value.to_s
+        end
+        binding.pry
+      end
+    end 
   end
- end
- 
+  hash
+end

@@ -1,5 +1,3 @@
-require 'pry'
-
 def nyc_pigeon_organizer (pigeon_data)
   pigeon_data.each_with_object({}) do |(attribute, values), hash|
     values.each do |value, names|
